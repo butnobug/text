@@ -22,11 +22,15 @@ ssh-keygen -t rsa -C "3047927842@qq.com"
 ```bash
 git config --global user.name "用户名" 
 git config --global user.email "3047927842@qq.com"
+```  
+关联远程仓库  
+```bash
+git remote add origin git@github.com:3047927842/text.git  
 ```
 ```bash
 git clone https://github,com/3047927842/text.git    //为保证本地库文件中有README.md
 ```  
-然后看到默认定位的位置中以我的库名所创建的文件夹  
+  
 打开他把文件移动过来，或者创建一个文件
 然后重新定位git的位置，定位在库的文件夹内  
 ```bash  
