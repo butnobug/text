@@ -43,10 +43,8 @@ git add 文件名.txt
 ```bash  
 git add 文件名称（带后缀)  //将文件add到Index 缓存区
 git commit -m "对文件的描述"   //commit 将文件送入HEAD，但是仍未进入远端仓库
-git push origin master    //将改动提交到远端仓库，master可以换成想要推送的其他分支  
+git push origin master    //将改动提交到远端仓库，master可以换成想要推送的其他分支.  
 ```  
-
-
 ---------- 
 [回到顶部](#readme)
 
