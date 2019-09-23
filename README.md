@@ -17,38 +17,31 @@ ssh-keygen -t rsa -C "3047927842@qq.com"
  ```bash
  ssh  -T git@github.com
  ```
-然后yes 回车
+然后yes 回车  
 输入代码提交者信息
 ```bash
 git config --global user.name "用户名" 
 git config --global user.email "3047927842@qq.com"
 ```
-
-在本地目录创建本地仓库，也可以新建文件夹，在里面右键git bash here
-重新跳出bash窗口，，
 ```bash
-git init         // 这时会有一个隐藏的.git文件夹在目录里（我是怎么知道的，当然是教程啦，以及我自己调了隐藏）
-```
-在该目录下创建一个代码或者复制粘贴过来到仓库里
-然后 
+git clone https://github,com/3047927842/text.git    //为保证本地库文件中有README.md
+```  
+然后看到默认定位的位置中以我的库名所创建的文件夹  
+打开他把文件移动过来，或者创建一个文件
+然后重新定位git的位置，定位在库的文件夹内  
+```bash  
+ls  //查看新创建的文件
+```  
 ```bash
 git status      //出现红色的待添加到本地仓库的文件名字，还自动补了.txt后缀
 git add 文件名.txt
 ```
-然后把add的文件提交到仓库
-```bash
-git commit -m "备注"
-```
+```bash  
+git add 文件名称（带后缀)  //将文件add到Index 缓存区
+git commit -m "对文件的描述"   //commit 将文件送入HEAD，但是仍未进入远端仓库
+git push origin master    //将改动提交到远端仓库，master可以换成想要推送的其他分支  
+```  
 
-讲本地仓库关联到GitHub上
-```bash
-git remote add origin http：//。。。。。。。。.git（之前复制的）
-```
-然后
-```bash
-git pull rebase origin master    //本地代码目录缺失README.md文件，完事后发现本地目录里有README.md了，
-git push -u origin master   //创建仓库，提交代码，OK，
-```
 
 ---------- 
 [回到顶部](#readme)
