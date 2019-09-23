@@ -15,7 +15,7 @@ ssh-keygen -t rsa -C "3047927842@qq.com"
  到浏览器界面，右上角的小三角形点开，setting，找到SSH and GPG keys，第一个描述一下是哪一个机器的，下一个框粘贴内容即可，最后ADD.
  然后检查是否绑定成功
  ```bash
- ssh git -T git@github.com
+ ssh  -T git@github.com
  ```
 然后yes 回车
 输入代码提交者信息
