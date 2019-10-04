@@ -9,7 +9,11 @@
    我知道要先在本地创建一个ssh key，在窗口键入 
 ```bash
 ssh-keygen -t rsa -C "3047927842@qq.com" 
-```
+```   
+```bash
+cat -A /c/Users/xxxx/.ssh/rsa.pub  
+```  
+
  然后一路回车，要设密码可以设，
  然后按照窗口里的目录用记事本打开id_rsa文件（有两个同名的，找.pub后缀名的,我哪里没有这个后缀名，但是对文件类型有区分，一个类型为文件，另一个是微软啥  啥啥的，看图标就知道是文档类）打开后，全部复制，
  到浏览器界面，右上角的小三角形点开，setting，找到SSH and GPG keys，第一个描述一下是哪一个机器的，下一个框粘贴内容即可，最后ADD.
@@ -23,12 +27,17 @@ ssh-keygen -t rsa -C "3047927842@qq.com"
 git config --global user.name "用户名" 
 git config --global user.email "3047927842@qq.com"
 ```  
+初始化本地仓库  
+
+```bash
+git init   
+```
 关联远程仓库  
 ```bash
 git remote add origin git@github.com:3047927842/text.git  
 ```
 ```bash
-git clone https://github,com/3047927842/text.git    //为保证本地库文件中有README.md
+git clone https://github.com/3047927842/text.git    //为保证本地库文件中有README.md
 ```  
   
 打开他把文件移动过来，或者创建一个文件
