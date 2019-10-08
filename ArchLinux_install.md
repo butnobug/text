@@ -1,6 +1,6 @@
 Arch Linux 安装  
 ===   
-####1.下载镜像，制作U盘启动工具  
+#### 1.下载镜像，制作U盘启动工具  
 [Archlinux下载](https://www.archlinux.org/download/)  
 
 下一步，把镜像写入U盘。  
@@ -15,7 +15,7 @@ Arch Linux 安装
 
 [Rufus使用方法](https://jingyan.baidu.com/article/0a52e3f48ad2b8bf62ed7236.html)  
 
-####2.开机进入U盘启动  
+#### 2.开机进入U盘启动  
 
 1.环境检查，区分UEFI与BIOS  
 
@@ -27,7 +27,7 @@ ls /sys/firmware/efi/efivars   #如果有很多行代码出现则是UEFI
                                #若提示目录不存在则是BIOS   
 
 ```
-####3.检查，连接网络
+#### 3.检查，连接网络
 ```bash
 ping -c 3 www.baidu.com   #能ping通则忽略下一步WiFi连接  
 
@@ -50,7 +50,7 @@ nano /etc/pacman.d/mirrorlist #疯狂删，只留下China的地址
                               #Server之前，毕竟这个是按顺序来的
                               #Ctrl+O保存，确定，Ctrl+X退出
 ```
-####4.分区
+#### 4.分区
 ```bash
 lsblk #检查一下自己的盘，确认自己想要安装的地方，
       #特别是你打算安装到移动硬盘上，一定要看清楚自己的盘的位置。
