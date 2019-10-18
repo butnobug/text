@@ -8,18 +8,25 @@
 安装完事后，有一个git bash，开启，一个黑框框，查教程开始了
    我知道要先在本地创建一个ssh key，在窗口键入 
 ```bash
-ssh-keygen -t rsa -C "3047927842@qq.com" 
+ssh-keygen -t rsa -C "3047927842@qq.com" #有了他就可以免除密码验证了，但是前提是你要验证 
 ```   
+然后一路回车，要设密码可以设  
+
 ```bash
 cat -A /c/Users/xxxx/.ssh/rsa.pub  
 ```  
+  
 
- 然后一路回车，要设密码可以设，
+上面的步骤和下面的步骤可以任选一  
+  
+
+ 
  然后按照窗口里的目录用记事本打开id_rsa文件（有两个同名的，找.pub后缀名的,我哪里没有这个后缀名，但是对文件类型有区分，一个类型为文件，另一个是微软啥  啥啥的，看图标就知道是文档类）打开后，全部复制，
  到浏览器界面，右上角的小三角形点开，setting，找到SSH and GPG keys，第一个描述一下是哪一个机器的，下一个框粘贴内容即可，最后ADD.
- 然后检查是否绑定成功
+ 然后检查是否绑定成功  
+
  ```bash
- ssh  -T git@github.com
+ ssh  -T git@github.com #
  ```
 然后yes 回车  
 输入代码提交者信息
@@ -27,21 +34,36 @@ cat -A /c/Users/xxxx/.ssh/rsa.pub
 git config --global user.name "用户名" 
 git config --global user.email "3047927842@qq.com"
 ```  
+```bash  
+mkdir test  
+cd test
+```
 初始化本地仓库  
 
 ```bash
 git init   
 ```
 关联远程仓库  
+
 ```bash
 git remote add origin git@github.com:3047927842/text.git  
-```
+```  
+###让本地文件和远程仓库保持一致
+
+####法一
 ```bash
 git clone https://github.com/3047927842/text.git    //为保证本地库文件中有README.md
 ```  
-  
-打开他把文件移动过来，或者创建一个文件
-然后重新定位git的位置，定位在库的文件夹内  
+####法二  
+```bash
+git pull
+```
+然后你可以建立一个测试文件，假设他是test.txt
+```bash
+vi test.txt  
+```
+i进入插入模式，写完后，保存退出。
+
 ```bash  
 ls  //查看新创建的文件
 ```  
